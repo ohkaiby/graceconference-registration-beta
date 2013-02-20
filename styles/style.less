@@ -1,6 +1,7 @@
 @skinny: 400;
 @buff: 600;
 @bold: 700;
+@default-font-size: 16px;
 
 @base-color: #f9f9f9;
 @default-text: #444;
@@ -15,7 +16,7 @@ html, body {
 body {
 	background-color: @base-color;
 	color: @default-text;
-	font-size: 1.125em;
+	font-size: @default-font-size;
 	font-family: 'Open Sans', 'Helvetica', sans-serif;
 }
 
@@ -25,3 +26,92 @@ h3 { font-size: 36px; }
 h4 { font-size: 24px; }
 
 h3, h4 { font-weight: @buff; }
+
+#grace-registration-form {
+	margin-top: @gutter-size;
+
+	label, input {
+		font-size: @default-font-size;
+		font-family: 'Open Sans', 'Helvetica', sans-serif;
+	}
+
+	legend {
+		margin-top: (@gutter-size * 1.5);
+	}
+
+	.row-fluid {
+		margin-bottom: (@gutter-size);
+	}
+
+	#name {
+		.last-name {
+			float: right;
+		}
+	}
+
+	#address {
+		.address-1 {
+			margin-bottom: (@gutter-size / 3);
+		}
+	}
+
+	#phone {
+		.phone-1 {
+			margin-bottom: (@gutter-size / 3);
+		}
+	}
+
+	#status,
+	#kids,
+	.kids-count,
+	.church-name {
+		display: none;
+	}
+
+	#kids,
+	#church {
+		.first-question {
+			min-height: 65px;
+		}
+	}
+
+	#kids {
+		.kids-no {
+			margin-left: @gutter-size;
+		}
+	}
+
+	#church {
+		.church-no {
+			margin-left: @gutter-size;
+		}
+	}
+}
+
+// Large desktop
+@media (min-width: 1200px) {
+
+}
+
+// Portrait tablet to landscape and desktop
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+// Landscape phone to portrait tablet
+@media (max-width: 767px) {
+	#grace-registration-form {
+		label {
+			margin-top: (@gutter-size / 2);
+		}
+
+		input[type="text"] {
+			margin-bottom: (@gutter-size / 3);
+		}
+	}
+}
+
+// Landscape phones and down
+@media (max-width: 480px) {
+
+}

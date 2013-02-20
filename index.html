@@ -7,13 +7,118 @@
 	<link href="styles/style.css" rel="stylesheet" type="text/css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="scripts/bootstrap.min.js"></script>
+	<script src="scripts/page1.js"></script>
 </head>
 <body>
+	<header class="hero-unit">
+		<h1>Grace Conference 2013 Registration</h1>
+		<p>A beta form for the next GRACE Conference. There is no validation yet.</p>
+	</header>
 	<div class="container">
-		<header class="hero-unit">
-			<h1>Grace Conference 2013 Registration</h1>
-			<p>A beta form for the next GRACE Conference.</p>
-		</header>
+		<form id="grace-registration-form" method="post" action="page2.html">
+			<fieldset>
+				<legend>Tell us about yourself...</legend>
+				<div id="name" class="row-fluid">
+					<div class="span8">
+						<label class="span2">
+							Name
+						</label>
+						<div class="span6">
+							<input type="text" placeholder="First name" name="first_name" class="first-name span6">
+							<input type="text" placeholder="Last name" name="last_name" class="last-name span6">
+						</div>
+					</div>
+				</div>
+				<div id="age" class="row-fluid">
+					<div class="span8">
+						<label class="span2">
+							Age
+						</label>
+						<div class="span6">
+							<label class="radio">
+								<input type="radio" name="age" value="12_17">
+								12-17
+							</label>
+							<label class="radio">
+								<input type="radio" name="age" value="18">
+								18+
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<legend class="status">Are you currently...?</legend>
+				<div id="status" class="row-fluid">
+					<div class="span8">
+						<label class="span2">
+							Status
+						</label>
+						<div class="span6">
+							<label class="radio">
+								<input type="radio" name="status" value="undergraduate">
+								In college (undergraduate).
+							</label>
+							<label class="radio">
+								<input type="radio" name="status" value="graduate">
+								In college (graduate).
+							</label>
+							<label class="radio">
+								<input type="radio" name="status" value="single">
+								Single and not in school.
+							</label>
+							<label class="radio">
+								<input type="radio" name="status" value="married">
+								Married.
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div id="kids" class="row-fluid">
+					<div class="span8">
+						<div class="first-question span4">
+							<label>Do you have kids?</label>
+							<label class="radio inline kids-yes">
+								<input type="radio" name="kids" value="yes"> Yes
+							</label>
+							<label class="radio inline kids-no">
+								<input type="radio" name="kids" value="no"> No
+							</label>
+						</div>
+
+						<div class="kids-count span5">
+							<label>Yay, how many?</label>
+							<input type="text" name="kids_count" value="" class="span10">
+						</div>
+					</div>
+				</div>
+
+				<div id="church" class="row-fluid">
+					<div class="span8">
+						<div class="first-question span4">
+							<label>Are you attending church?</label>
+							<label class="radio inline church-yes">
+								<input type="radio" name="church" value="yes"> Yes
+							</label>
+							<label class="radio inline church-no">
+								<input type="radio" name="church" value="no"> No
+							</label>
+						</div>
+
+						<div class="church-name span5">
+							<label>That's good news, which church?</label>
+							<input type="text" name="church_name" value="" class="span10">
+						</div>
+					</div>
+				</div>
+
+				<div class="row-fluid">
+					<div class="span3">
+						<button class="btn btn-large btn-block" type="submit" onclick="">Next &raquo;</button>
+					</div>
+				</div>
+			</fieldset>
+		</form>
 	</div>
 </body>
 </html>

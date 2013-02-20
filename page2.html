@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+	<title>Grace Conference 2013 Registration Form [IN PROGRESS]</title>
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+	<link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="scripts/bootstrap.min.js"></script>
+	<script src="scripts/page2.js"></script>
+</head>
+<body>
+	<header class="hero-unit">
+		<h1>Grace Conference 2013 Registration</h1>
+		<p>A beta form for the next GRACE Conference. There is no validation yet.</p>
+	</header>
+	<div class="container">
+		<form id="grace-registration-form" method="post" action="confirm.html" onsubmit="return false;">
+			<fieldset>
+				<legend>Please fill out your information</legend>
+				<div class="email row-fluid">
+					<div class="span8">
+						<label class="span2">
+							Email
+						</label>
+						<div class="span6">
+							<input type="text" placeholder="Email address" name="email" class="span6">
+						</div>
+					</div>
+				</div>
+				<div class="phone row-fluid">
+					<div class="span8">
+						<label class="span2">
+							Phone
+						</label>
+						<div class="span6">
+							<input type="text" placeholder="Primary Phone" name="phone_1" class="phone-1 span12">
+							<input type="text" placeholder="Secondary Phone" name="phone_2" class="phone-2 span12">
+						</div>
+					</div>
+				</div>
+				<div class="address row-fluid">
+					<div class="span8">
+						<label class="span2">
+							Address
+						</label>
+						<div class="span6">
+							<input type="text" placeholder="Address 1" name="address_1" class="address-1 span12">
+							<input type="text" placeholder="Address 2" name="address_2" class="address-2 span12">
+						</div>
+					</div>
+				</div>
+				<div class="citystatezip row-fluid">
+					<div class="span8">
+						<div class="span3">
+							<label>
+								City
+							</label>
+							<input class="span12" type="text" name="city" placeholder="City">
+						</div>
+
+						<div class="span3">
+							<label>
+								State
+							</label>
+							<input class="span12" type="text" name="state" data-provide="typeahead" autocomplete="off" data-items="4" data-source="[&quot;Alabama&quot;,&quot;Alaska&quot;,&quot;Arizona&quot;,&quot;Arkansas&quot;,&quot;California&quot;,&quot;Colorado&quot;,&quot;Connecticut&quot;,&quot;Delaware&quot;,&quot;Florida&quot;,&quot;Georgia&quot;,&quot;Hawaii&quot;,&quot;Idaho&quot;,&quot;Illinois&quot;,&quot;Indiana&quot;,&quot;Iowa&quot;,&quot;Kansas&quot;,&quot;Kentucky&quot;,&quot;Louisiana&quot;,&quot;Maine&quot;,&quot;Maryland&quot;,&quot;Massachusetts&quot;,&quot;Michigan&quot;,&quot;Minnesota&quot;,&quot;Mississippi&quot;,&quot;Missouri&quot;,&quot;Montana&quot;,&quot;Nebraska&quot;,&quot;Nevada&quot;,&quot;New Hampshire&quot;,&quot;New Jersey&quot;,&quot;New Mexico&quot;,&quot;New York&quot;,&quot;North Dakota&quot;,&quot;North Carolina&quot;,&quot;Ohio&quot;,&quot;Oklahoma&quot;,&quot;Oregon&quot;,&quot;Pennsylvania&quot;,&quot;Rhode Island&quot;,&quot;South Carolina&quot;,&quot;South Dakota&quot;,&quot;Tennessee&quot;,&quot;Texas&quot;,&quot;Utah&quot;,&quot;Vermont&quot;,&quot;Virginia&quot;,&quot;Washington&quot;,&quot;West Virginia&quot;,&quot;Wisconsin&quot;,&quot;Wyoming&quot;]" placeholder="State">
+						</div>
+
+						<div class="span2">
+							<label>Zip</label>
+							<input class="span12" type="text" name="zip" placeholder="Zip">
+						</div>
+					</div>
+				</div>
+
+				<!--<legend>Choose your meal plan</legend>-->
+				<div class="row-fluid">
+					<div class="span3">
+						<button class="btn btn-large btn-block btn-primary" type="submit" onclick="">Finish Signing Up! &raquo;</button>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

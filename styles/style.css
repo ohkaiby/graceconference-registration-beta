@@ -6,7 +6,7 @@ body {
 body {
   background-color: #f9f9f9;
   color: #444444;
-  font-size: 1.125em;
+  font-size: 16px;
   font-family: 'Open Sans', 'Helvetica', sans-serif;
 }
 h1 {
@@ -24,4 +24,60 @@ h4 {
 h3,
 h4 {
   font-weight: 600;
+}
+#grace-registration-form {
+  margin-top: 30px;
+}
+#grace-registration-form label,
+#grace-registration-form input {
+  font-size: 16px;
+  font-family: 'Open Sans', 'Helvetica', sans-serif;
+}
+#grace-registration-form legend {
+  margin-top: 45px;
+}
+#grace-registration-form .row-fluid {
+  margin-bottom: 30px;
+}
+#grace-registration-form #name .last-name {
+  float: right;
+}
+#grace-registration-form #address .address-1 {
+  margin-bottom: 10px;
+}
+#grace-registration-form #phone .phone-1 {
+  margin-bottom: 10px;
+}
+#grace-registration-form #status,
+#grace-registration-form #kids,
+#grace-registration-form .kids-count,
+#grace-registration-form .church-name {
+  display: none;
+}
+#grace-registration-form #kids .first-question,
+#grace-registration-form #church .first-question {
+  min-height: 65px;
+}
+#grace-registration-form #kids .kids-no {
+  margin-left: 30px;
+}
+#grace-registration-form #church .church-no {
+  margin-left: 30px;
+}
+@media (min-width: 1200px) {
+  
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  
+}
+@media (max-width: 767px) {
+  #grace-registration-form label {
+    margin-top: 15px;
+  }
+  #grace-registration-form input[type="text"] {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 480px) {
+  
 }
