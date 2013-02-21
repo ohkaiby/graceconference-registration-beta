@@ -1,18 +1,30 @@
 ( function( $ ) {
 	$( document ).ready( function() {
-		$( '#age .radio' ).on( 'click', function( ev ) {
-			var input = $( ev.currentTarget ).children( 'input' ),
-				showStatus = input.val() === '18';
+		var slideSpeed = 'slow',
+			fadeSpeed = 'fast';
 
-			$( '#status' )[ showStatus ? 'slideDown' : 'slideUp' ]( 'slow' );
+		$( '#age .radio' ).on( 'click', function( ev ) {
+			var $status = $( '#status' ),
+				$status18 = $( '#status-18' ),
+				$kids = $( '#kids' );
+
+			$kids.slideUp( slideSpeed );
+
+			if ( $( ev.currentTarget ).children( 'input' ).val() === '18' ) {
+				$status.slideUp( slideSpeed );
+				$status18.slideDown( slideSpeed );
+			} else {
+				$status.slideDown( slideSpeed );
+				$status18.slideUp( slideSpeed );
+			}
 		} );
 
-		$( '#status .radio' ).on( 'click', function( ev ) {
+		$( '#status-18 .radio' ).on( 'click', function( ev ) {
 			var showKidsForStatuses = [ 'single', 'married' ],
 				input = $( ev.currentTarget ).children( 'input' ),
 				showKids = $.inArray( input.val(), showKidsForStatuses ) > -1;
 
-			$( '#kids' )[ showKids ? 'slideDown' : 'slideUp' ]( 'slow' );
+			$( '#kids' )[ showKids ? 'slideDown' : 'slideUp' ]( slideSpeed );
 		} );
 
 		$( '#kids .radio' ).on( 'click', function( ev ) {
@@ -21,11 +33,11 @@
 				$kidsEl = $( '#kids' );
 
 			if ( countKids ) {
-				$kidsEl.find( '.kids-count' ).fadeIn( 'fast', function() {
+				$kidsEl.find( '.kids-count' ).fadeIn( fadeSpeed, function() {
 					$kidsEl.find( '.kids-count input' ).focus();
 				} );
 			} else {
-				$kidsEl.find( '.kids-count' ).fadeOut( 'fast' );
+				$kidsEl.find( '.kids-count' ).fadeOut( fadeSpeed );
 			}
 		} );
 
@@ -35,14 +47,14 @@
 				$churchEl = $( '#church' );
 
 			if ( attendsChurch ) {
-				$churchEl.find( '.church-name' ).fadeIn( 'fast', function() {
+				$churchEl.find( '.church-name' ).fadeIn( fadeSpeed, function() {
 					$churchEl.find( '.church-name input' ).focus();
 				} );
 			} else {
-				$churchEl.find( '.church-name' ).fadeOut( 'fast' );
+				$churchEl.find( '.church-name' ).fadeOut( fadeSpeed );
 			}
 
-			$( '#church .church-name' )[ attendsChurch ? 'fadeIn' : 'fadeOut' ]( 'fast' );
+			$( '#church .church-name' )[ attendsChurch ? 'fadeIn' : 'fadeOut' ]( fadeSpeed );
 		} );
 	} );
 } )( jQuery );
